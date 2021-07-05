@@ -1,15 +1,18 @@
 import './stylesheets/scss/global.scss';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCoffee } from '@fortawesome/free-solid-svg-icons';
+import Sidebar from './app/components/Sidebar';
+import NewsFeed from './app/components/NewsFeed';
+import Widgets from './app/components/Widgets';
 
-function App() {
-  const element = <FontAwesomeIcon icon={faCoffee} />
-
+const App = () => {
   return (
     <div className="App">
-      test text
-      {element}
-      {console.log(process.env.REACT_APP_FIREBASE_AUTH_DOMAIN)}
+      <main className="layout">
+        <div className="container">
+          <Sidebar />
+          <NewsFeed />
+          <Widgets />
+        </div>
+      </main>
     </div>
   );
 }
