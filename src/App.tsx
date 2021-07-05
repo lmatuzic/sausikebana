@@ -7,7 +7,7 @@ function App() {
 
   return (
     <div className="App">
-      jeba vam isus mater
+      test text
       {element}
     </div>
   );
