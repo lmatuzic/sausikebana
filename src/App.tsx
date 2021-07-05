@@ -9,6 +9,7 @@ function App() {
     <div className="App">
       test text
       {element}
+      {console.log(process.env.REACT_APP_FIREBASE_AUTH_DOMAIN)}
     </div>
   );
 }
