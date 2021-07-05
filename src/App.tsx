@@ -6,10 +6,12 @@ import Widgets from './app/components/Widgets';
 const App = () => {
   return (
     <div className="App">
-      <main className="layout container">
-        <Sidebar />
-        <NewsFeed />
-        <Widgets />
+      <main className="layout">
+        <div className="container">
+          <Sidebar />
+          <NewsFeed />
+          <Widgets />
+        </div>
       </main>
     </div>
   );
