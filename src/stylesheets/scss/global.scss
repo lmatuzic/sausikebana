@@ -1,5 +1,6 @@
 @use './partials' as *;
 @use './mixins' as mixin;
+@use './header';
 
 * {
   padding: 0;

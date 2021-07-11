@@ -1,19 +1,33 @@
 import './stylesheets/scss/global.scss';
-import Sidebar from './app/components/Sidebar';
-import NewsFeed from './app/components/NewsFeed';
-import Widgets from './app/components/Widgets';
-
+import { Home } from './pages/Home';
+import { Header } from './components/header/Header';
+import {
+   BrowserRouter as Router,
+   Switch,
+   Route,
+} from "react-router-dom";
+import { Market } from './pages/Market';
+import { Groups } from './pages/Groups';
 const App = () => {
   return (
-    <div className="App">
-      <main className="layout">
-        <div className="container">
-          <Sidebar />
-          <NewsFeed />
-          <Widgets />
-        </div>
-      </main>
-    </div>
+     <>
+       <Router>
+          <Header />
+             <Switch>
+                <Route exact path="/">
+                   <Home />
+                </Route>
+
+                <Route path="/market">
+                   <Market />
+                </Route>
+
+                <Route path="/groups">
+                   <Groups />
+                </Route>
+             </Switch>
+       </Router>
+     </>
   );
 }
 
