@@ -1,3 +1,4 @@
+import { FC } from 'react';
 import './stylesheets/scss/global.scss';
 import { Home } from './pages/Home';
 import { Header } from './components/header/Header';
@@ -8,26 +9,33 @@ import {
 } from "react-router-dom";
 import { Market } from './pages/Market';
 import { Groups } from './pages/Groups';
-const App = () => {
+import Signup from './components/signup/Signup';
+
+const App: FC = () => {
   return (
-     <>
-       <Router>
-          <Header />
-             <Switch>
-                <Route exact path="/">
-                   <Home />
-                </Route>
+    <>
+      <Router>
+        {/* <Header /> */}
 
-                <Route path="/market">
-                   <Market />
-                </Route>
+        <Switch>
+          <Route path="/signup">
+            <Signup />
+          </Route>
 
-                <Route path="/groups">
-                   <Groups />
-                </Route>
-             </Switch>
-       </Router>
-     </>
+          <Route exact path="/">
+            <Home />
+          </Route>
+
+          <Route path="/market">
+            <Market />
+          </Route>
+
+          <Route path="/groups">
+            <Groups />
+          </Route>
+        </Switch>
+      </Router>
+    </>
   );
 }
 

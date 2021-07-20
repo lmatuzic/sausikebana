@@ -1,0 +1,66 @@
+@use '../abstracts';
+
+.auth {
+  margin-top: 4rem;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &-form {
+    width: 40%;
+    margin-top: 3rem;
+
+    &__item {
+      display: flex;
+      flex-direction: column;
+      margin-top: 2rem;
+
+      &:first-child {
+        margin-top: 0;
+      }
+
+      label {
+        margin-bottom: 0.5rem;
+      }
+
+      input {
+        border: 1px solid abstracts.$light-gray;
+        border-radius: abstracts.$border-radius-md;
+        outline: none;
+        padding: 0.75rem;
+        transition: border-color 0.25s ease;
+
+        &:active, &:focus {
+          border-color: abstracts.$blue;
+        }
+      }
+    }
+  }
+
+  &-submit {
+    &__wrapper {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    &__btn {
+      margin-top: 2rem;
+      border: 1px solid abstracts.$light-gray;
+      border-radius: abstracts.$border-radius-md;
+      padding: 0.75rem;
+      outline: none;
+      cursor: pointer;
+      width: 25%;
+      transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+
+      &:hover {
+        background-color: abstracts.$blue;
+        color: abstracts.$white;
+        border-color: abstracts.$blue;
+      }
+    }
+  }
+}

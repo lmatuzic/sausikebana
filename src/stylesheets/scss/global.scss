@@ -1,6 +1,7 @@
-@use './partials' as *;
+@use './abstracts';
 @use './mixins' as mixin;
 @use './header';
+@use './components';
 
 * {
   padding: 0;
@@ -22,11 +23,11 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-radius: $border-radius;
+    border-radius: abstracts.$border-radius;
 
     &:first-child {
       @include mixin.layout-item;
-      background-color: $green;
+      background-color: abstracts.$green;
       width: 20vw;
 
       @media (max-width: 1200px) {
@@ -41,7 +42,7 @@ body {
     &:nth-child(2) {
       margin: 10px;
       padding: 20px 0;
-      background-color: $red;
+      background-color: abstracts.$red;
       width: 45vw;
 
       @media (max-width: 1200px) {
@@ -51,7 +52,7 @@ body {
 
     &:last-child {
       @include mixin.layout-item;
-      background-color: $blue;
+      background-color: abstracts.$blue;
       width: 15vw;
 
       @media (max-width: 1200px) {
