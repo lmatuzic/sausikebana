@@ -12,14 +12,14 @@ type HeaderProps = {
 }
 
 export const Header: FC<HeaderProps> = (props) => {
-   const inputRef = useRef<HTMLInputElement | null>(null);
+  const inputRef = useRef<HTMLInputElement | null>(null);
 
-   //ovo je za DOM mutatione samo, skoro same shit ko use effect
-   useLayoutEffect(() => {
-      if(inputRef?.current?.focus){
-         inputRef.current.focus();
-      }
-   }, []);
+  //ovo je za DOM mutatione samo, skoro same shit ko use effect
+  useLayoutEffect(() => {
+    if (inputRef?.current?.focus) {
+      inputRef.current.focus();
+    }
+  }, []);
 
    return (
       <div className="header-container">

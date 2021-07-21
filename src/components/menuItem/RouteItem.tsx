@@ -13,7 +13,6 @@ type Data = {
 type RouteItemProps = {
    item: Data[];
    iconContainer?: string;
-
 }
 
 export const RouteItem: FC<RouteItemProps> = (props) => {
@@ -23,7 +22,7 @@ export const RouteItem: FC<RouteItemProps> = (props) => {
       <div>
          {data.map((item) => {
             const isActive = `${item.route}` === location.pathname
-            console.log('Active route: ', isActive , 'Route: ',item.route, 'LOCATION: ', location.pathname)
+            // console.log('Active route: ', isActive , 'Route: ',item.route, 'LOCATION: ', location.pathname)
             return (
                <NavLink exact to={`${item.route}`} key={item.id}  activeClassName='active'>
                   <span className={isActive ? `active-icon active` : props.iconContainer}>

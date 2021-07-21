@@ -3,19 +3,19 @@ import './stylesheets/scss/global.scss';
 import { Home } from './pages/Home';
 import { Header } from './components/header/Header';
 import {
-   BrowserRouter as Router,
-   Switch,
-   Route,
+  BrowserRouter as Router,
+  Switch,
+  Route,
 } from "react-router-dom";
 import { Market } from './pages/Market';
 import { Groups } from './pages/Groups';
-import Signup from './components/signup/Signup';
+import Signup from './auth/Signup';
 
 const App: FC = () => {
   return (
     <>
       <Router>
-        {/* <Header /> */}
+        <Header />
 
         <Switch>
           <Route path="/signup">

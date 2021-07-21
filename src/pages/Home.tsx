@@ -1,4 +1,4 @@
-import {FC} from 'react';
+import { FC } from 'react';
 import Sidebar from '../app/components/Sidebar';
 import NewsFeed from '../app/components/NewsFeed';
 import Widgets from '../app/components/Widgets';
