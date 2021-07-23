@@ -10,8 +10,16 @@
   }
 
   &-form {
-    width: 40%;
+    width: 25rem;
+    border: 1px solid abstracts.$gray;
+    border-radius: abstracts.$border-radius-sm;
+    padding: 2.5rem;
     margin-top: 3rem;
+
+    @media (max-width: 576px) {
+      width: 100%;
+      padding: 1.25rem;
+    }
 
     &__item {
       display: flex;
@@ -53,8 +61,12 @@
       padding: 0.75rem;
       outline: none;
       cursor: pointer;
-      width: 25%;
+      width: 8rem;
       transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+
+      @media (max-width: 576px) {
+        width: 100%;
+      }
 
       &:hover {
         background-color: abstracts.$blue;

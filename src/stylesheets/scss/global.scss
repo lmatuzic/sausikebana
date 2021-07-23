@@ -2,11 +2,13 @@
 @use './mixins' as mixin;
 @use './header';
 @use './components';
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;800;900&display=swap');
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: 'Mulish', sans-serif;
 }
 
 body {

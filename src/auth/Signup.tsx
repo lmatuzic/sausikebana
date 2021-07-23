@@ -1,4 +1,4 @@
-import { FC, useState } from 'react';
+import { FC } from 'react';
 import { Formik, Field, Form} from 'formik';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { auth } from '../firebase';
@@ -16,6 +16,8 @@ const Signup: FC = () => {
     error,
   ] = useCreateUserWithEmailAndPassword(auth);
 
+  let currentUser = auth.currentUser;
+
   if (error) {
     return (
       <div>
@@ -31,7 +33,7 @@ const Signup: FC = () => {
   if (user) {
     return (
       <div>
-        <p>Registered User: {user.user?.email}</p>
+        <p>Registered User: {currentUser?.email}</p>
       </div>
     );
   }
