@@ -1,4 +1,4 @@
-import ThemeToggleButton from '@/components/buttons/ThemeToggleButton';
+import ThemeToggleButton from '@/app/components/buttons/ThemeToggleButton';
 
 export default function Home() {
 	return (
