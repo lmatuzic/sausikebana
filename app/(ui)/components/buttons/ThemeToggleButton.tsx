@@ -1,15 +1,15 @@
 'use client';
 
-import { Button } from '@/app/components/ui/Button';
-import { useId } from 'react';
+import { Button } from '@/app/(ui)/components/shadcn/Button';
 import {
 	DropdownMenu,
 	DropdownMenuContent,
 	DropdownMenuItem,
 	DropdownMenuTrigger,
-} from '@/app/components/ui/DropdownMenu';
+} from '@/app/(ui)/components/shadcn/DropdownMenu';
 import { MoonIcon, SunIcon } from '@radix-ui/react-icons';
 import { useTheme } from 'next-themes';
+import { useId } from 'react';
 
 export default function ThemeToggleButton() {
 	const { setTheme } = useTheme();
