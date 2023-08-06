@@ -1,7 +1,9 @@
-import Navigation from '@/app/components/layouts/Navigation';
+import Navigation from '@/app/components/navigations/Navigation';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
+import { ClerkProvider } from '@clerk/nextjs';
+// import { dark } from '@clerk/themes';
 import Providers from './providers/AppProvider';
 
 const inter = Inter({ subsets: ['latin'] });
@@ -13,13 +15,15 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
 	return (
-		<html lang='en'>
-			<body className={inter.className}>
-				<Providers>
-					<Navigation />
-					{children}
-				</Providers>
-			</body>
-		</html>
+		<ClerkProvider>
+			<html lang='en' className='min-h-screen'>
+				<body className={`grid place-items-center ${inter.className}`}>
+					<Providers>
+						<Navigation />
+						{children}
+					</Providers>
+				</body>
+			</html>
+		</ClerkProvider>
 	);
 }

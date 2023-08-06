@@ -1,13 +1,13 @@
 'use client';
 
-import { Button } from '@/app/components/buttons/Button';
+import { Button } from '@/app/components/ui/Button';
 import { useId } from 'react';
 import {
 	DropdownMenu,
 	DropdownMenuContent,
 	DropdownMenuItem,
 	DropdownMenuTrigger,
-} from '@/app/components/menus/DropdownMenu';
+} from '@/app/components/ui/DropdownMenu';
 import { MoonIcon, SunIcon } from '@radix-ui/react-icons';
 import { useTheme } from 'next-themes';
 
